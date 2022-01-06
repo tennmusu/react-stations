@@ -29,9 +29,9 @@ export const App = () => {
   return (
     <div>
       <header>
-        わんこの写真
+        わんこの写真🐾
       </header>
-      <p>可愛いわんちゃんの写真を表示するサイトです</p>
+      <p>可愛いわんちゃんの写真を表示するサイトです。</p>
       <img src={dogUrl}></img>
       <button 
       onClick={() => getDogUrl()}
