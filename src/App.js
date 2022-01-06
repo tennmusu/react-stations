@@ -18,6 +18,11 @@ export const App = () => {
       </header>
       <p>可愛いわんちゃんの写真を表示するサイトです</p>
       <img src={dogUrl}></img>
+      <button 
+      onClick={()=>setDogUrl('https://images.dog.ceo/breeds/hound-english/n02089973_1132.jpg')}
+      >
+      更新！
+      </button>
     </div>
   )
 }
