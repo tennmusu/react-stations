@@ -2,15 +2,30 @@
 
 import * as React from 'react'
 import { useState } from 'react';
-
+import { useEffect } from 'react';
 import './App.css'
 
 /**
  * 
  * @type {React.FC}
  */
+
+
 export const App = () => {
-  const [dogUrl,setDogUrl] = useState('https://images.dog.ceo/breeds/akita/Akina_Inu_in_Riga_1.jpg');
+  const getDogUrl=()=>{
+    fetch("https://dog.ceo/api/breeds/image/random")
+      .then(res => res.json())
+      .then(
+        (result) => {
+         setDogUrl(result.message)
+        },
+        (error) => {
+         
+        }
+      )
+}
+  const [dogUrl,setDogUrl] = useState(getDogUrl);
+  
   return (
     <div>
       <header>
@@ -19,7 +34,7 @@ export const App = () => {
       <p>可愛いわんちゃんの写真を表示するサイトです</p>
       <img src={dogUrl}></img>
       <button 
-      onClick={()=>setDogUrl('https://images.dog.ceo/breeds/hound-english/n02089973_1132.jpg')}
+      onClick={() => getDogUrl()}
       >
       更新！
       </button>
