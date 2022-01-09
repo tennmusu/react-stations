@@ -17,6 +17,7 @@ img{
 height:30%;
 width: 30%;
 margin-bottom: -7px;
+
 }
 button{
 border: 1px solid black;
@@ -25,4 +26,9 @@ margin-left:5px;
 }
 button:hover{
 background-color:gray;
+}
+.ImageList{
+  display:flex;
+  flex-wrap:wrap;
+  width:100%;
 }
