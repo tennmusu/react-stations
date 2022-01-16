@@ -54,6 +54,7 @@ export const DogListContainer = () => {
       })
       return(
       <div>
+      <div className='list_button'>
       <BreedsSelect breeds={breeds}
       setSelectedBreed={setSelectedBreed.bind()}
       />
@@ -62,6 +63,7 @@ export const DogListContainer = () => {
       >
       表示！     
       </button>
+      </div>
       <div className='ImageList'>
       {Images}
       </div>

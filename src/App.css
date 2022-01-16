@@ -32,3 +32,9 @@ background-color:gray;
   flex-wrap:wrap;
   width:100%;
 }
+.list_button{
+
+  display: flex;
+  margin-top:3px;
+  margin-bottom:3px;
+}
